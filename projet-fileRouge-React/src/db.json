@@ -1,0 +1,30 @@
+{
+    "products" : [{
+            "id": 1,
+            "name": "32g DRR5 6000mhz cl38",
+             "price": "600"
+    }],
+    "users" : [{
+            "id": 1,
+             "name": "Geuse",
+             "email": "geuse@gmail.com",
+                "isAdmin": true
+    }],
+    "orders" : [{
+        "id": 1,
+        
+        "user":  [{ "id": 1,
+            "name": "Geuse",
+            "email": "geuse@gmail.com",
+            "isAdmin": true
+            }],
+
+        "products": [{
+            "id": 1,
+            "name": "32g DRR5 6000mhz cl38",
+            "price": "600"
+        }]
+             
+
+    }]
+}
