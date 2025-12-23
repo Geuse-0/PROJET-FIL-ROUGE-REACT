@@ -1,0 +1,19 @@
+{
+    "products" : [{
+
+         "id": 1,
+             "name": "RTX 5090",
+             "price": "3000",
+                "quantity": "43",
+                "description": "Carte graphique GeForce la plus puissante jamais conçue, la NVIDIA® GeForce RTX™ 5090 fournit des capacités révolutionnaires aux joueurs et aux créateurs. Prenez en charge les modèles les plus avancés et les charges de travail créatives les plus complexes grâce à une puissance brute sans précédent en matière d'IA. Jouez avec le ray tracing intégral et un rendu à faible latence. Basée sur l’architecture NVIDIA Blackwell à hautes performances et équipée de 32 Go de mémoire GDDR7 ultra-rapide, la GeForce RTX 5090 vous permet de tout faire, tout simplement."
+    }],
+    "users" : [{
+            "id": 1,
+             "name": "Geuse",
+             "email": "geuse@gmail.com",
+                "isAdmin": true
+    }],
+    "orders" : []
+             
+
+    }
