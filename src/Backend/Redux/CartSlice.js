@@ -1,52 +1,69 @@
-import { createAsyncThunk,createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const CartSlice = createSlice({
   name: "cart",
-  initialState: [
-    {}
-
-  ],
+  initialState: {
+    cartItems: []
+  },
 
   reducers: {
-
     addToCart: (state, action) => {
-      const { id, name, price } = action.payload;
+      const { id, name, price, stock } = action.payload;
 
-      const item = state.items.find(i => i.id === id);
+      const item = state.cartItems.find(i => i.id === id);
 
       if (item) {
-        item.quantity += 1;
+        if (item.quantity < item.stock) {
+          item.quantity += 1;
+        }
       } else {
-        state.items.push({
+        state.cartItems.push({
           id,
           name,
           price,
-          quantity: 1,
-        })
+          stock,
+          quantity: 1
+        });
       }
     },
 
     removeFromCart: (state, action) => {
-      return state.filter(item => item.id !== action.payload)
+      state.cartItems = state.cartItems.filter(
+        item => item.id !== action.payload
+      );
     },
+
     clearCart: (state) => {
-      state = []
+      state.cartItems = [];
     },
+
     updateQuantity: (state, action) => {
-
       const { id, quantity } = action.payload;
+      const item = state.cartItems.find(i => i.id === id);
 
-      const item = state.items.find(i => i.id === id);
-      if (item && quantity > 0) {
-        item.quantity = quantity;
+      if (!item) return;
+
+      if (quantity < 1) {
+        item.quantity = 1;
+        return;
       }
 
+      if (quantity > item.stock) {
+        item.quantity = item.stock;
+        return;
+      }
+
+      item.quantity = quantity;
     }
-
   }
-
-})
+});
 
 export default CartSlice.reducer;
-export const { addToCart, removeFromCart, clearCart, updateQuantity } = CartSlice.actions
-export const getCart = (state) => state.cart 
+export const {
+  addToCart,
+  removeFromCart,
+  clearCart,
+  updateQuantity
+} = CartSlice.actions;
+
+export const getCart = (state) => state.cart.cartItems;

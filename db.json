@@ -1,19 +1,273 @@
 {
-    "products" : [{
-
-         "id": 1,
-             "name": "RTX 5090",
-             "price": "3000",
-                "quantity": "43",
-                "description": "Carte graphique GeForce la plus puissante jamais conçue, la NVIDIA® GeForce RTX™ 5090 fournit des capacités révolutionnaires aux joueurs et aux créateurs. Prenez en charge les modèles les plus avancés et les charges de travail créatives les plus complexes grâce à une puissance brute sans précédent en matière d'IA. Jouez avec le ray tracing intégral et un rendu à faible latence. Basée sur l’architecture NVIDIA Blackwell à hautes performances et équipée de 32 Go de mémoire GDDR7 ultra-rapide, la GeForce RTX 5090 vous permet de tout faire, tout simplement."
-    }],
-    "users" : [{
-            "id": 1,
-             "name": "Geuse",
-             "email": "geuse@gmail.com",
-                "isAdmin": true
-    }],
-    "orders" : []
-             
-
+  "products": [
+    {
+      "id": "3",
+      "name": "RTX 5090",
+      "price": 2000,
+      "categorie": "GPU",
+      "quantity": "35",
+      "description": "Obtenez des performances révolutionnaires avec les cartes graphiques GeForce RTX™ 5070 Ti et RTX 5070, équipées de l'architecture NVIDIA Blackwell. Jouez à des fréquences d’images élevées avec le DLSS 4, exprimez toute votre créativité avec NVIDIA Studio et accédez à des expériences inédites grâce à la puissance de l’IA.",
+      "previeDescr": "RTX 5070 offre hautes performances et créativité optimisée avec DLSS 4 et IA."
+    },
+    {
+      "id": "4",
+      "name": "Ryzen 9 9950X",
+      "price": "799",
+      "categorie": "CPU",
+      "quantity": "32",
+      "description": "Le Ryzen 9 9950X est un processeur ultra haut de gamme basé sur l’architecture Zen 5. Avec 16 cœurs et 32 threads, il offre des performances monstrueuses en gaming comme en production lourde (render, compilation, IA). Idéal pour les configs extrêmes.",
+      "previeDescr": "Ryzen 9 9950X, 16 cœurs, 32 threads, idéal pour gaming et production intensive."
+    },
+    {
+      "id": "5",
+      "name": "Ryzen 7 9700X",
+      "price": "429",
+      "categorie": "CPU",
+      "quantity": "48",
+      "description": "Le Ryzen 7 9700X est un excellent équilibre entre performances et efficacité énergétique. Parfait pour le gaming haut FPS et le multitâche avancé, il s’intègre parfaitement dans des configurations modernes AM5.",
+      "previeDescr": "Ryzen 7 9700X combine performance et efficacité pour gaming et multitâche."
+    },
+    {
+      "id": "6",
+      "name": "Ryzen 5 9600X",
+      "price": "299",
+      "categorie": "CPU",
+      "quantity": "61",
+      "description": "Le Ryzen 5 9600X est un processeur gaming très solide offrant d’excellentes performances en jeu et en usage quotidien. Un choix malin pour une config performante sans exploser le budget.",
+      "previeDescr": "Ryzen 5 9600X performant pour gaming et usage quotidien à prix contenu."
+    },
+    {
+      "id": "7",
+      "name": "Intel Core i9-14900K",
+      "price": "699",
+      "categorie": "CPU",
+      "quantity": "27",
+      "description": "Le Core i9-14900K est le processeur le plus puissant d’Intel pour le gaming et la création. Avec ses cœurs Performance et Efficient, il excelle dans les charges lourdes et le streaming intensif.",
+      "previeDescr": "Intel i9-14900K, le plus puissant pour gaming et charges lourdes."
+    },
+    {
+      "id": "8",
+      "name": "Intel Core i7-14700K",
+      "price": "469",
+      "categorie": "CPU",
+      "quantity": "39",
+      "description": "Le Core i7-14700K propose un excellent rapport performances/prix pour les gamers exigeants et les créateurs. Très à l’aise en multitâche et en gaming haute fréquence.",
+      "previeDescr": "Intel i7-14700K, excellent rapport performance/prix pour gamers et créateurs."
+    },
+    {
+      "id": "9",
+      "name": "Intel Core i5-14600K",
+      "price": "329",
+      "categorie": "CPU",
+      "quantity": "58",
+      "description": "Le Core i5-14600K est un processeur polyvalent, parfait pour le gaming et les applications courantes. Une valeur sûre pour les configurations milieu de gamme performantes.",
+      "previeDescr": "Intel i5-14600K, processeur polyvalent pour gaming et usage quotidien."
+    },
+    {
+      "id": "10",
+      "name": "RTX 5060",
+      "price": "650",
+      "categorie": "GPU",
+      "quantity": "50",
+      "description": "Carte graphique milieu de gamme offrant de bonnes performances en gaming 1440p et en création 3D légère.",
+      "previeDescr": "RTX 5060, gaming 1440p et création 3D légère performante."
+    },
+    {
+      "id": "11",
+      "name": "RTX 5050",
+      "price": "520",
+      "categorie": "GPU",
+      "quantity": "42",
+      "description": "Carte graphique d’entrée de gamme pour jeux en Full HD et applications créatives basiques.",
+      "previeDescr": "RTX 5050, entrée de gamme pour Full HD et créations simples."
+    },
+    {
+      "id": "12",
+      "name": "Ryzen 3 9300X",
+      "price": "189",
+      "categorie": "CPU",
+      "quantity": "70",
+      "description": "Processeur compact pour PC milieu de gamme, adapté au gaming léger et au multitâche.",
+      "previeDescr": "Ryzen 3 9300X, adapté gaming léger et multitâche."
+    },
+    {
+      "id": "13",
+      "name": "Intel Core i3-13400",
+      "price": "159",
+      "categorie": "CPU",
+      "quantity": "80",
+      "description": "Processeur d’entrée de gamme performant pour tâches quotidiennes et jeux légers.",
+      "previeDescr": "Intel i3-13400, parfait pour usage quotidien et jeux légers."
+    },
+    {
+      "id": "14",
+      "name": "RTX 5040",
+      "price": "430",
+      "categorie": "GPU",
+      "quantity": "60",
+      "description": "Carte graphique pour gaming en 1080p et montage vidéo léger.",
+      "previeDescr": "RTX 5040, gaming Full HD et montage léger."
+    },
+    {
+      "id": "15",
+      "name": "Ryzen 7 9750X",
+      "price": "499",
+      "categorie": "CPU",
+      "quantity": "44",
+      "description": "Processeur puissant pour gaming haute fréquence et création multimédia.",
+      "previeDescr": "Ryzen 7 9750X, gaming haute fréquence et création multimédia."
+    },
+    {
+      "id": "16",
+      "name": "Intel Core i7-14900F",
+      "price": "480",
+      "categorie": "CPU",
+      "quantity": "36",
+      "description": "Processeur performant pour gaming et multitâche intensif, sans GPU intégré.",
+      "previeDescr": "Intel i7-14900F, gaming et multitâche intensif sans GPU intégré."
+    },
+    {
+      "id": "17",
+      "name": "RTX 5030",
+      "price": "360",
+      "categorie": "GPU",
+      "quantity": "55",
+      "description": "Carte graphique pour gaming 1080p avec bonne fluidité et consommation réduite.",
+      "previeDescr": "RTX 5030, gaming 1080p fluide avec faible consommation."
+    },
+    {
+      "id": "18",
+      "name": "RTX 5020",
+      "price": "310",
+      "categorie": "GPU",
+      "quantity": "65",
+      "description": "Carte graphique d’entrée pour jeux et applications simples, Full HD.",
+      "previeDescr": "RTX 5020, entrée de gamme pour Full HD et jeux simples."
+    },
+    {
+      "id": "19",
+      "name": "Ryzen 5 9650X",
+      "price": "339",
+      "categorie": "CPU",
+      "quantity": "50",
+      "description": "Processeur performant milieu de gamme pour gaming et productivité légère.",
+      "previeDescr": "Ryzen 5 9650X, gaming et productivité légère."
+    },
+    {
+      "id": "20",
+      "name": "Intel Core i5-14700F",
+      "price": "310",
+      "categorie": "CPU",
+      "quantity": "60",
+      "description": "Processeur milieu de gamme performant pour PC gamer et tâches quotidiennes.",
+      "previeDescr": "Intel i5-14700F, PC gamer et tâches quotidiennes."
+    },
+    {
+      "id": "21",
+      "name": "RTX 5010",
+      "price": "280",
+      "categorie": "GPU",
+      "quantity": "72",
+      "description": "Carte graphique économique pour jeux légers et bureautique graphique.",
+      "previeDescr": "RTX 5010, économique pour jeux légers et bureautique graphique."
+    },
+    {
+      "id": "22",
+      "name": "RTX 5000",
+      "price": "250",
+      "categorie": "GPU",
+      "quantity": "80",
+      "description": "Carte d’entrée pour PC standard, adaptée à la HD et tâches multimédias basiques.",
+      "previeDescr": "RTX 5000, HD et tâches multimédias basiques."
+    },
+    {
+      "id": "23",
+      "name": "Ryzen 3 9350G",
+      "price": "199",
+      "categorie": "CPU",
+      "quantity": "70",
+      "description": "Processeur compact pour PC bureautique et gaming léger.",
+      "previeDescr": "Ryzen 3 9350G, bureautique et gaming léger."
+    },
+    {
+      "id": "24",
+      "name": "Intel Core i3-13500",
+      "price": "169",
+      "categorie": "CPU",
+      "quantity": "75",
+      "description": "Processeur d’entrée de gamme pour tâches quotidiennes et jeux occasionnels.",
+      "previeDescr": "Intel i3-13500, tâches quotidiennes et jeux occasionnels."
+    },
+    {
+      "id": "25",
+      "name": "RTX 4990",
+      "price": "220",
+      "categorie": "GPU",
+      "quantity": "60",
+      "description": "Carte graphique basique pour Full HD et applications multimédia simples.",
+      "previeDescr": "RTX 4990, Full HD et multimédia simple."
+    },
+    {
+      "id": "26",
+      "name": "Ryzen 5 9500X",
+      "price": "299",
+      "categorie": "CPU",
+      "quantity": "50",
+      "description": "Processeur milieu de gamme pour gaming et productivité quotidienne.",
+      "previeDescr": "Ryzen 5 9500X, gaming et productivité quotidienne."
+    },
+    {
+      "id": "27",
+      "name": "Intel Core i5-14500",
+      "price": "300",
+      "categorie": "CPU",
+      "quantity": "55",
+      "description": "Processeur polyvalent pour gaming et applications standards.",
+      "previeDescr": "Intel i5-14500, polyvalent pour gaming et applications standards."
+    },
+    {
+      "id": "28",
+      "name": "RTX 4980",
+      "price": "200",
+      "categorie": "GPU",
+      "quantity": "70",
+      "description": "Carte graphique entrée de gamme pour HD et gaming léger.",
+      "previeDescr": "RTX 4980, HD et gaming léger."
+    },
+    {
+      "id": "29",
+      "name": "RTX 4970",
+      "price": "180",
+      "categorie": "GPU",
+      "quantity": "80",
+      "description": "Carte graphique économique pour jeux simples et multimédia.",
+      "previeDescr": "RTX 4970, économique pour jeux simples et multimédia."
+    },
+    {
+      "id": "30",
+      "name": "Ryzen 3 9200G",
+      "price": "149",
+      "categorie": "CPU",
+      "quantity": "90",
+      "description": "Processeur léger pour PC bureautique et tâches basiques.",
+      "previeDescr": "Ryzen 3 9200G, bureautique et tâches basiques."
+    },
+    {
+      "id": "f79c",
+      "name": "test",
+      "price": 10,
+      "description": "juste un test",
+      "quantity": 14,
+      "image": "",
+      "categorie": "test"
     }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "geuse@techzone.com",
+      "password": "123456"
+    }
+  ],
+  "orders": []
+}
